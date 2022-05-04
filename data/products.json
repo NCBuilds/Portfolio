@@ -1,0 +1,86 @@
+[
+    {
+      "name": "Dokkum",
+      "discription": "600mmx600mm",
+      "price": "€120,00",
+      "paypal":"9JvvKMVF4J5KW",
+      "scale": "1:500",
+      "image": "images/products/dokkum.jpg",
+      "hoverimage": "images/products/dokkum.jpg",
+      "date": "2020-01-01",
+      "type": "gravering",
+      "tag": "hout, stadskaart"
+    },
+    {
+      "name": "Leeuwarden",
+      "discription": "600mmx600mm",
+      "price": "€140,00",
+      "paypal":"JDECUHP25QLQJ",
+      "scale": "1:1000",
+      "image": "images/products/dokkum.jpg",
+      "hoverimage": "images/products/dokkum.jpg",
+      "date": "2020-01-01",
+      "type": "gravering",
+      "tag": "hout, stadskaart"
+  },
+  {
+      "name": "Delft",
+      "discription": "400mmx600mm",
+      "price": "€140,00",
+      "paypal":"",
+      "scale": "1:1000",
+      "image": "images/products/dokkum.jpg",
+      "hoverimage": "images/products/dokkum.jpg",
+      "date": "2020-01-01",
+      "type": "gravering",
+      "tag": "hout, stadskaart"
+  },
+  {
+      "name": "op maat",
+      "discription": "",
+      "price": "(aanvragen)",
+      "paypal":"",
+      "scale": "",
+      "image": "images/products/dokkum.jpg",
+      "hoverimage": "images/products/dokkum.jpg",
+      "date": "2000-01-01",
+      "type": "gravering",
+      "tag": "hout, stadskaart"
+  },
+  {
+      "name": "nachtkastje(&#x270F;)",
+      "discription": "stakable nightstand",
+      "price": "€10,00",
+      "paypal":"",
+      "scale": "(n.a.)",
+      "image": "images/products/nightstand.jpg",
+      "hoverimage": "images/products/nightstand.jpg",
+      "date": "2020-01-01",
+      "type": "blauwdruk",
+      "tag": "project, blauwdruk, blueprint, drawing"
+  },
+  {
+      "name": "Sawhorse V1 (&#x270F;)",
+      "discription": "dismantable sawhorse blauwdruk",
+      "price": "€5,00",
+      "paypal":"",
+      "scale": "(n.a.)",
+      "image": "images/products/sawhorse.jpg",
+      "hoverimage": "images/products/sawhorse.jpg",
+      "date": "2020-01-01",
+      "type": "blauwdruk",
+      "tag": "project, blauwdruk, blueprint, drawing"
+  },
+  {
+      "name": "Mafell 1000pw stofzuiger-koppeling",
+      "discription": "Dust extraction attachment for the mafell 1000pw mill",
+      "price": "€30,00",
+      "paypal":"",
+      "scale": "1:1",
+      "image": "images/products/dustextraction.png",
+      "hoverimage": "images/products/hoverover/dustextraction.gif",
+      "date": "2022-02-16",
+      "type": "product",
+      "tag": "product, mill, dust, extraction, hose, cnc, stofzuiger"
+  }
+]
