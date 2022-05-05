@@ -55,6 +55,7 @@
   text-align: left;
   color: white;
   z-index: 500;
+  display: none;
 }
 .more-info_card img{
   width: 30%;

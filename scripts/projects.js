@@ -130,7 +130,7 @@ function displayprojects(projects) {
                 <div class="card-body">
                     <h2 class="card-title">${project.name}</h2>
                     <p>${project.discription}</p>
-                    <a href="${project.link}" class="button">Meer info</a>
+                    <a href="${project.link}" class="button" onclick="showid_${project.name}()">Meer info</a>
                 </div>
             </div>
         `;
@@ -144,26 +144,19 @@ function displayprojects(projects) {
     const htmlString = projects
         .map((project) => {
             return `
-            <div class="more-info_card">
-            <div class="more-info_image1">
-                <img src="${project.image1}" alt="${project.name}" title="${project.name}"> 
-            </div>
-            <div class="more-info_image2">
-                <img src="${project.image2}" alt="${project.name}" title="${project.name}"> 
-            </div>
-            <div class="more-info_image3">
-                <img src="${project.image3}" alt="${project.name}" title="${project.name}"> 
-            </div>
-            <div class="more-info_description">
-                <p>${project.long_discription}</p>
-            </div>
-            <div class="more-info_video">
-                <p>${project.video}</p>
-            </div>
-            <div class="more-info_pdf">
-                <p>${project.pdf}</p>
-            </div>
-        </div>
+                  <div class="more-info_card" id="id_${project.name}">
+                        <img src="${project.img1}" id="more-info_img1" alt="${project.name}" title="${project.name}"> 
+                        <img src="${project.img2}" id="more-info_img2" alt="${project.name}" title="${project.name}"> 
+                        <img src="${project.img3}" id="more-info_img3" alt="${project.name}" title="${project.name}"> 
+                    <div class="more-info_description">
+                        <h1>${project.name}</h1>
+                        <p>${project.long_discription}</p>
+                        <a href="${project.link}">"${project.link}"</a>
+                    </div>
+                    <div class="more-info_iframe">
+                      <iframe src="${project.iframe}" class="info-iframe"> </iframe>
+                    </div>
+                  </div>
         `;
     })
     .join('');
@@ -171,5 +164,10 @@ function displayprojects(projects) {
 };
 */
 
-
 loadprojects();
+
+/*
+function show______________(){
+    document.getElementById("placeholder1").style.display = 'block';
+    }
+*/
