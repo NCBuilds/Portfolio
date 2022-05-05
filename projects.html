@@ -135,29 +135,29 @@
     </div>
       </aside>
       <!--sidebar--> 
-      <img class="scroll_down_arrow" src="/images/scroll-down.gif" alt="scroll down">
-      <a href="https://www.linkedin.com/in/cedric-spijksma-b97587157"><img class="social_media_1" src="/images/about/linkedin.png" alt="Linkedin" title="Linkedin"></a>
-      <a href="https://www.instagram.com/cedricspijksma/"><img class="social_media_2" src="/images/about/instagram.png" alt="Instagram" title="Instagram"></a>
-      <a href="https://wa.me/31627145872"><img class="social_media_3" src="/images/about/whatsapp.png" alt="Whatsapp" title="Whatsapp"></a>
+      <img class="scroll_down_arrow" src="images/scroll-down.gif" alt="scroll down">
+      <a href="https://www.linkedin.com/in/cedric-spijksma-b97587157"><img class="social_media_1" src="images/about/linkedin.png" alt="Linkedin" title="Linkedin"></a>
+      <a href="https://www.instagram.com/cedricspijksma/"><img class="social_media_2" src="images/about/instagram.png" alt="Instagram" title="Instagram"></a>
+      <a href="https://wa.me/31627145872"><img class="social_media_3" src="images/about/whatsapp.png" alt="Whatsapp" title="Whatsapp"></a>
                 <main class="projects_container">
                   <ul id="more-info_card"></ul>
-
+                  <!--
                   <div class="more-info_card">
-                        <img src="images/projects/1.jpg" id="more-info_img1" alt="${project.name}" title="${project.name}"> 
-                        <img src="images/projects/3.jpg" id="more-info_img2" alt="${project.name}" title="${project.name}"> 
-                        <img src="images/projects/5.jpg" id="more-info_img3" alt="${project.name}" title="${project.name}"> 
+                        <img src="${project.img1}" id="more-info_img1" alt="${project.name}" title="${project.name}"> 
+                        <img src="${project.img2}" id="more-info_img2" alt="${project.name}" title="${project.name}"> 
+                        <img src="${project.img3}" id="more-info_img3" alt="${project.name}" title="${project.name}"> 
                     <div class="more-info_description">
+                        <h1>${project.name}</h1>
                         <p>${project.long_discription}</p>
+                        <a href="${project.link}">"${project.link}"</a>
                     </div>
-                    <div class="more-info_video">
-                      <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"frameborder="0" allowfullscreen class="video"> </iframe>
-                    </div>
-                    <div class="more-info_pdf">
-                        <p>${project.pdf}</p>
+                    <div class="more-info_iframe">
+                      <iframe src="${project.iframe}" class="info-iframe"> </iframe>
                     </div>
                   </div>
+                  -->
                     <ul id="projectsList"></ul>
-                    <script src="scripts/projects.js"></script>
+                    <script src="scripts/projects.js"></script>  
                 </main>
               
     </body>
