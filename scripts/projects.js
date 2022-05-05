@@ -1,4 +1,5 @@
 const projectsList = document.getElementById('projectsList');
+const moreinfo = document.getElementById('more-info_card');
 const searchBar = document.getElementById('searchBar');
 const sortx = document.getElementById('sort');
 const category = document.getElementById('category');
@@ -16,40 +17,95 @@ const loadprojects = async () => {
 
 sortx.addEventListener('change', (e) => {
     var valueSelected = sortx.value;
-    //alert("sort"+valueSelected);
     var items = [].concat(hpprojects); // copy array not a pointer
     if (valueSelected == 'name') {
         items.sort((a, b) => {
             let fa = a.name.toLowerCase(),
                 fb = b.name.toLowerCase();
-            if (fa < fb) {return -1;}
-            if (fa > fb) {return 1;}
+            if (fa < fb) {
+                return -1;
+            }
+            if (fa > fb) {
+                return 1;
+            }
             return 0;
         })
     }
-    if (valueSelected == 'categorie') {
+    if (valueSelected == 'category') { 
         items.sort((a, b) => {
-            let fa = a.type.toLowerCase(),
-                fb = b.type.toLowerCase();
-            if (fa < fb) {return -1;}
-            if (fa > fb) {return 1;}
+            var fa = a.type.toLowerCase();
+            var fb = b.type.toLowerCase();
+            if (fa < fb) {
+                return -1;
+            }
+            if (fa > fb) {
+                return 1;
+            }
             return 0;
         })
     }
-    if (valueSelected == 'datum v') {
+    if (valueSelected == 'dateup') {
         items.sort((a, b) => {
-            return b.date - a.date;
-        });
+            var fa = a.date.toLowerCase();
+            var fb = b.date.toLowerCase();
+            if (fa < fb) {
+                return -1;
+            }
+            if (fa > fb) {
+                return 1;
+            }
+            return 0;
+        })
     }
-    if (valueSelected == 'datum ^') {
+    if (valueSelected == 'datedown') {
         items.sort((a, b) => {
-            return b.date - a.date;
-        });
+            var fa = a.date.toLowerCase();
+            var fb = b.date.toLowerCase();
+            if (fa > fb) {
+                return -1;
+            }
+            if (fa < fb) {
+                return 1;
+            }
+            return 0;
+        })
     }
     displayprojects(items);
-});
-  
+}); //end of the sort by types
 
+category.addEventListener('change', (e) => {
+    var valueSelected = category.value;
+    var items = [].concat(hpprojects); 
+    var categorisedprojects=[];
+    var check = "";
+    if (valueSelected == 'Construction') { 
+        check = "bouw";
+    }
+    if (valueSelected == 'Design') {
+        check = "ontwerp";
+    }
+    if (valueSelected == 'Engineering') {
+        check = "engineering";
+    }
+    if (valueSelected == 'School') {
+        check = "school";
+    }
+    if (valueSelected == 'Other') {
+        check = "overig";
+    }
+    if (check !== "") {
+        
+        items.filter(function(a){
+            if (a.type==check){
+                categorisedprojects.push(a);
+            }
+        });
+    }
+    if (valueSelected=="all"){
+        categorisedprojects=hpprojects;
+    }
+    displayprojects(categorisedprojects);
+}); //end category
 
 searchBar.addEventListener, searchBar.addEventListener('keyup', (e) => {
     const searchString = e.target.value.toLowerCase();
@@ -67,11 +123,10 @@ searchBar.addEventListener, searchBar.addEventListener('keyup', (e) => {
 
 
 function displayprojects(projects) {
-    //alert("hallo");
     const htmlString = projects
         .map((project) => {
             return `
-            <div class="card" style="background-image: url('${project.image}');background-position: center">
+            <div class="card" style="background-image: url('${project.image}')">
                 <div class="card-body">
                     <h2 class="card-title">${project.name}</h2>
                     <p>${project.discription}</p>
@@ -84,5 +139,37 @@ function displayprojects(projects) {
     projectsList.innerHTML = htmlString;
 };
 
-loadprojects();
+/*
+function displayprojects(projects) {
+    const htmlString = projects
+        .map((project) => {
+            return `
+            <div class="more-info_card">
+            <div class="more-info_image1">
+                <img src="${project.image1}" alt="${project.name}" title="${project.name}"> 
+            </div>
+            <div class="more-info_image2">
+                <img src="${project.image2}" alt="${project.name}" title="${project.name}"> 
+            </div>
+            <div class="more-info_image3">
+                <img src="${project.image3}" alt="${project.name}" title="${project.name}"> 
+            </div>
+            <div class="more-info_description">
+                <p>${project.long_discription}</p>
+            </div>
+            <div class="more-info_video">
+                <p>${project.video}</p>
+            </div>
+            <div class="more-info_pdf">
+                <p>${project.pdf}</p>
+            </div>
+        </div>
+        `;
+    })
+    .join('');
+    moreinfo.innerHTML = htmlString;
+};
+*/
 
+
+loadprojects();

@@ -99,12 +99,11 @@ sortx.addEventListener('change', (e) => {
 }); //end of the sort by types
 
 category.addEventListener('change', (e) => {
-    /* type= gravering blauwdruk product */
     var valueSelected = category.value;
-    var items = [].concat(hpproducts); // copy array not a pointer
-    var show=[];
+    var items = [].concat(hpproducts); 
+    var categorisedproducts=[];
     var check = "";
-    if (valueSelected == 'cities') { // hier moet wel de value staan
+    if (valueSelected == 'cities') { 
         check = "gravering";
     }
     if (valueSelected == 'plans') {
@@ -117,14 +116,14 @@ category.addEventListener('change', (e) => {
         
         items.filter(function(a){
             if (a.type==check){
-                show.push(a);
+                categorisedproducts.push(a);
             }
         });
     }
     if (valueSelected=="all"){
-        show=hpproducts;
+        categorisedproducts=hpproducts;
     }
-    displayproducts(show);
+    displayproducts(categorisedproducts);
 }); //end category
 
 searchBar.addEventListener('keyup', (e) => {
@@ -144,7 +143,7 @@ function displayproducts(products) {
     const htmlString = products
         .map((product) => {
             return `
-            <div class="card" style="background-image: url('${product.image}');background-position: center">
+            <div class="card" style="background-image: url('${product.image}')">
                 <div class="card-body">
                     <h2 class="card-title">${product.name}</h2>
                     <p>${product.discription}</p>
@@ -155,6 +154,7 @@ function displayproducts(products) {
                     </form>
                 </div>
             </div>
+
         `;
         })
         .join('');

@@ -22,6 +22,7 @@ transition: transform ease 250ms;
 border-radius: 0.5rem;
 overflow: hidden;
 max-height: 42vh;
+background-position: center
 }
 
 .card:hover {
