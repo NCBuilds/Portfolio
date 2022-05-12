@@ -6,8 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-        <link rel="stylesheet" href="styles/styles.css">  
-        <link rel="stylesheet" href="styles/tools.css">
+        <link rel="stylesheet" href="styles/styles.css">   
         <link rel="stylesheet" href="styles/navigation.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="scripts/nav.js" defer></script>
@@ -135,11 +134,36 @@
       </aside>
       <!--sidebar--> 
       <img class="scroll_down_arrow" src="images/scroll-down.gif" alt="scroll down">
-      <a href="https://www.linkedin.com/in/cedric-spijksma-b97587157"><img class="social_media_1" src="images/about/linkedin.png" alt="Linkedin" title="Linkedin"></a>
-      <a href="https://www.instagram.com/cedricspijksma/"><img class="social_media_2" src="images/about/instagram.png" alt="Instagram" title="Instagram"></a>
-      <a href="https://wa.me/31627145872"><img class="social_media_3" src="images/about/whatsapp.png" alt="Whatsapp" title="Whatsapp"></a>
-      <main class="tools_container">
-        <ul id="toolsList">
+      <script src="jquery-3.6.0.min.js"></script>
+      <script>
+        $(document).ready(function(){
+          function arrowshow(){
+            var wh=$(window).height();
+            var htmlh=$("html,body").height();
+            var scrh=$("html,body").scrollTop();
+            //alert ("wh="+wh+" htmlh="+htmlh +" scrh="+scrh+"
+        hide="+((wh+scrh)>=(htmlh-300))";
+            if ((wh+scrh)>=(htmlh-200)) {
+              $(".scroll_down_arrow").hide();
+            } else {
+              $(".scroll_down_arrow").show();
+            }
+          }
+          $(window).scroll(function(){
+            arrowshow();
+          });
+          $(window).resize(function(){
+            arrowshow();
+          });
+          arrowshow();
+        });
+      </script>
+      <a href="https://www.linkedin.com/in/cedric-spijksma-b97587157"><img class="social_media" id="social_media_1" src="images/about/linkedin.png" alt="Linkedin" title="Linkedin"></a>
+      <a href="https://www.instagram.com/cedricspijksma/"><img class="social_media" id="social_media_2" src="images/about/instagram.png" alt="Instagram" title="Instagram"></a>
+      <a href="https://wa.me/31627145872"><img class="social_media" id="social_media_3" src="images/about/whatsapp.png" alt="Whatsapp" title="Whatsapp"></a>
+      
+      <main class="card_container">
+        <ul id="cardList">
         <div class="card" style="background-image: url('images/about/anno.png');background-position: center">
           <div class="card-body">
               <h2 class="card-title">${tool.name}</h2>

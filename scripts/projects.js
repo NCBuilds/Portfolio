@@ -1,9 +1,9 @@
-const projectsList = document.getElementById('projectsList');
-const moreinfo = document.getElementById('more-info_card');
+const projectsList = document.getElementById('cardList');
 const searchBar = document.getElementById('searchBar');
 const sortx = document.getElementById('sort');
 const category = document.getElementById('category');
 let hpprojects = [];
+var categorisedprojects=[].concat(hpprojects);
 
 const loadprojects = async () => {
     try {
@@ -17,7 +17,7 @@ const loadprojects = async () => {
 
 sortx.addEventListener('change', (e) => {
     var valueSelected = sortx.value;
-    var items = [].concat(hpprojects); // copy array not a pointer
+    var items = [].concat(categorisedprojects);//[].concat(hpprojects); // copy array not a pointer
     if (valueSelected == 'name') {
         items.sort((a, b) => {
             let fa = a.name.toLowerCase(),
@@ -29,7 +29,7 @@ sortx.addEventListener('change', (e) => {
                 return 1;
             }
             return 0;
-        })
+        });
     }
     if (valueSelected == 'category') { 
         items.sort((a, b) => {
@@ -42,7 +42,7 @@ sortx.addEventListener('change', (e) => {
                 return 1;
             }
             return 0;
-        })
+        });
     }
     if (valueSelected == 'dateup') {
         items.sort((a, b) => {
@@ -55,7 +55,7 @@ sortx.addEventListener('change', (e) => {
                 return 1;
             }
             return 0;
-        })
+        });
     }
     if (valueSelected == 'datedown') {
         items.sort((a, b) => {
@@ -68,7 +68,7 @@ sortx.addEventListener('change', (e) => {
                 return 1;
             }
             return 0;
-        })
+        });
     }
     displayprojects(items);
 }); //end of the sort by types
@@ -76,7 +76,8 @@ sortx.addEventListener('change', (e) => {
 category.addEventListener('change', (e) => {
     var valueSelected = category.value;
     var items = [].concat(hpprojects); 
-    var categorisedprojects=[];
+   categorisedprojects=[];
+   //categorisedprojects=[].concat(hpprojects);
     var check = "";
     if (valueSelected == 'Construction') { 
         check = "bouw";
@@ -93,6 +94,7 @@ category.addEventListener('change', (e) => {
     if (valueSelected == 'Other') {
         check = "overig";
     }
+
     if (check !== "") {
         
         items.filter(function(a){
@@ -102,7 +104,7 @@ category.addEventListener('change', (e) => {
         });
     }
     if (valueSelected=="all"){
-        categorisedprojects=hpprojects;
+        categorisedprojects=[].concat(hpprojects);
     }
     displayprojects(categorisedprojects);
 }); //end category
@@ -130,44 +132,31 @@ function displayprojects(projects) {
                 <div class="card-body">
                     <h2 class="card-title">${project.name}</h2>
                     <p>${project.discription}</p>
-                    <a href="${project.link}" class="button" onclick="showid_${project.name}()">Meer info</a>
+                    <button onclick="document.getElementById('myModal${project.id}').style.display='inline'" class="button">Meer info</button>
                 </div>
             </div>
+
+                <div id="myModal${project.id}" class="modal">
+                    <div class="more-info_card">
+                            <span class="close" onclick="document.getElementById('myModal${project.id}').style.display='none'">X</span>
+                            <img src="${project.image1}" id="more-info_img1" alt="${project.name}" title="${project.name}"> 
+                            <img src="${project.image2}" id="more-info_img2" alt="${project.name}" title="${project.name}"> 
+                            <img src="${project.image3}" id="more-info_img3" alt="${project.name}" title="${project.name}"> 
+                        <div class="more-info_description">
+                            <h1>${project.name}</h1>
+                            <p>${project.long_discription}</p>
+                            <a href="${project.link}">"${project.link}"</a>
+                        </div>
+                        <div class="more-info_iframe">
+                        <iframe src="${project.iframe}" class="info-iframe"> </iframe>
+                        </div>
+                    </div>
+                </div>
+            
         `;
         })
         .join('');
     projectsList.innerHTML = htmlString;
-};
-
-/*
-function displayprojects(projects) {
-    const htmlString = projects
-        .map((project) => {
-            return `
-                  <div class="more-info_card" id="id_${project.name}">
-                        <img src="${project.img1}" id="more-info_img1" alt="${project.name}" title="${project.name}"> 
-                        <img src="${project.img2}" id="more-info_img2" alt="${project.name}" title="${project.name}"> 
-                        <img src="${project.img3}" id="more-info_img3" alt="${project.name}" title="${project.name}"> 
-                    <div class="more-info_description">
-                        <h1>${project.name}</h1>
-                        <p>${project.long_discription}</p>
-                        <a href="${project.link}">"${project.link}"</a>
-                    </div>
-                    <div class="more-info_iframe">
-                      <iframe src="${project.iframe}" class="info-iframe"> </iframe>
-                    </div>
-                  </div>
-        `;
-    })
-    .join('');
-    moreinfo.innerHTML = htmlString;
-};
-*/
+}
 
 loadprojects();
-
-/*
-function show______________(){
-    document.getElementById("placeholder1").style.display = 'block';
-    }
-*/

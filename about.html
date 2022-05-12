@@ -94,23 +94,47 @@
       <!--sidebar--> 
   
   <main class="container">   
-    <img class="scroll_down_arrow" src="images/scroll-down.gif" alt="scroll down">
-    <a href="https://www.linkedin.com/in/cedric-spijksma-b97587157"><img class="social_media_1" src="images/about/linkedin.png" alt="Linkedin" title="Linkedin"></a>
-    <a href="https://www.instagram.com/cedricspijksma/"><img class="social_media_2" src="images/about/instagram.png" alt="Instagram" title="Instagram"></a>
-    <a href="https://wa.me/31627145872"><img class="social_media_3" src="images/about/whatsapp.png" alt="Whatsapp" title="Whatsapp"></a>
+    <img class="scroll_down_arrow" id="scroll_down_arrow" src="images/scroll-down.gif" alt="scroll down">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        function arrowshow(){
+          var wh=$(window).height();
+          var htmlh=$("html,body").height();
+          var scrh=$("html,body").scrollTop();
+          //alert ("wh="+wh+" htmlh="+htmlh +" scrh="+scrh+"
+      hide="+((wh+scrh)>=(htmlh-300))";
+          if ((wh+scrh)>=(htmlh-200)) {
+            $(".scroll_down_arrow").hide();
+          } else {
+            $(".scroll_down_arrow").show();
+          }
+        }
+        $(window).scroll(function(){
+          arrowshow();
+        });
+        $(window).resize(function(){
+          arrowshow();
+        });
+        arrowshow();
+      });
+    </script>
+      <a href="https://www.linkedin.com/in/cedric-spijksma-b97587157"><img class="social_media" id="social_media_1" src="images/about/linkedin.png" alt="Linkedin" title="Linkedin"></a>
+      <a href="https://www.instagram.com/cedricspijksma/"><img class="social_media" id="social_media_2" src="images/about/instagram.png" alt="Instagram" title="Instagram"></a>
+      <a href="https://wa.me/31627145872"><img class="social_media" id="social_media_3" src="images/about/whatsapp.png" alt="Whatsapp" title="Whatsapp"></a>
 
 <!--title-->
 <a name="top"></a>
 <div class="section">
   <div class="section_text">
     <div class="slidingHorizontal">
-    <h1>        
+    <h2>        
       <span>Hello creator</span>
       <span>Hello innovator</span>
       <span>Hello bouwer</span>
       <span>Hello werkgever</span>
       <span>Hello bezoeker</span>
-    </h1>
+    </h2>
   </div>
 
 <!--initial text-->
@@ -135,7 +159,7 @@
         <a href="#Contact" style="text-decoration:none">Contact</a>
     </p>
   </div>
-  <img src="images/about/profile.png" alt="Cedric Spijksma" title="Cedric Spijksma" width="200px" height="200px" style="transform: translate(0%, 0%);"> 
+  <img id="sectionimg0" src="images/about/profile.png" alt="Cedric Spijksma" title="Cedric Spijksma"> 
       
 <!--quote-->
 <q>Problemen bestaan niet, alleen maar uitdagingen</q>
@@ -146,10 +170,10 @@
     <a name="Projects"></a>
     <div class="section">
       <div class="section_text">
-    <p>Als een creator werk in allemaal soorten projecten, van modelbouw/maquettes tot aan de realisatie van hele huizen/appartementen complexen.  <br><a href="projects">Voor meer zie mijn project pagina</a> </p>
+    <p>Als een creator werk in allemaal soorten projecten, van modelbouw/maquettes tot aan de realisatie van hele huizen/appartementen complexen.  <br> <br><a href="projects">Voor meer zie de project pagina</a> </p>
     </div>
-    <img src="images/about/printer.jpg" alt="3D printer" title="3D printer" width="200px" height="200px" style="transform: translate(0%, 0%);">
-    <img src="images/about/garagedoor.jpg" alt="Garagedoor" title="Garagedoor" width="200px" height="200px" style="transform: translate(-50%, 70%);">
+    <img id="sectionimg1" src="images/about/printer.jpg" alt="3D printer" title="3D printer">
+    <img id="sectionimg2" src="images/about/garagedoor.jpg" alt="Garagedoor" title="Garagedoor">
     
     <!--quote-->
     <a href="https://www.youtube.com/watch?v=tXCuV_9naVI&ab_channel=WomboAnimals" style="text-decoration:none" target="_blank">
@@ -164,8 +188,8 @@
       <div class="section_text">
     <p>Naast het werken aan projecten en programmeren ben ik ook vervend wintersport liefhebber. In de winter kun je me dan ook in de alpen vinden. In de zomer houd ik me bezig met survival(runs) bij sport vereniging de Leeuwen.</p>
     </div>
-    <img src="images/about/skiing.jpg" alt="Skiing" title="skiing" style="transform: translate(0%, 0%);">
-    <img src="images/about/survival.jpg" alt="Survival" title="Survival" style="transform: translate(-50%, 70%);">
+    <img id="sectionimg1" src="images/about/skiing.jpg" alt="Skiing" title="skiing">
+    <img id="sectionimg2" src="images/about/survival.jpg" alt="Survival" title="Survival">
     
     <!--quote-->
     <q>Vaak ben je te bang</q>
@@ -179,8 +203,8 @@
         <h1>&lt;H1&gt;Coderen&lt;/H1&gt;</h1>
         <p>&lt;p&gt;naast projecten werk ik ook veel aan coderen en het leren van programma's&lt;/p&gt; <br>customElements.define('programming', code):<br>HTML/CSS<br>Grasshopper/dynamo<br>Node-red mysql</p>
       </div>
-        <img src="images/about/grashopper.jfif" alt="Grasshopper" title="Grasshopper" style="transform: translate(-50%, 70%);">
-        <img src="images/about/gcode.PNG" alt="Gcode" title="Gcode" style="transform: translate(0%, 0%);">
+        <img id="sectionimg1" src="images/about/grashopper.jfif" alt="Grasshopper" title="Grasshopper">
+        <img id="sectionimg2" src="images/about/gcode.PNG" alt="Gcode" title="Gcode">
             
         <!--quote-->
         <q>Je kan beter het gereedschap hebben voor je het nodig hebt, dan er op moeten wachten als je het echt nodig hebt</q>
@@ -194,31 +218,14 @@
         <h1>Programma's</h1>
         <p>Zoals eerder vermeld is één van mijn hobbys programma's leren, van engineering software tot aan visualisatie en 3D. hiernaast kan je alle programmas zien die ik ken. de progressie geeft aan hoeveel vertrouwen ik mijzelf geef in het programma</p>
         <br>
-        <div id="searchWrapper">
-            <input
-                type="text"
-                name="searchBar"
-                id="searchBar"
-                placeholder="zoek een programma"
-                list="suggestions"
-            />
-              <datalist id="suggestions">
-                  <option value="Autodesk"></option>
-                  <option value="Microsoft"></option>
-                  <option value="3D"></option>
-                  <option value="Rendering"></option>
-              </datalist>
-            </div>
           </div>
             <div class="programs_sidebar">
-            <div class="programs_container">
               <ul id="programsList"></ul>
-              <script src="scripts/programs.js"></script>      
-            </div> 
+              <script src="scripts/programs.js"></script>       
           </div>
        
     <!--quote-->
-    <q>Je hebt geen tijd over, tijd moet je maken</q>
+    <q>Tijd heb je niet, tijd moet je maken</q>
     <hr>
     </div> 
     
@@ -236,8 +243,8 @@
             Rijbewijs (AM-B), VCA 
         </p>
       </div>
-        <img src="https://d2k0ddhflgrk1i.cloudfront.net/Websections/Huisstijl/Visual-Homepage-Merk-v1.png" alt="TU-Delft" title="TU-Delft" style="transform: translate(0%, 0%);object-fit: contain;">
-        <img src="https://www.kennispoortdrenthe.nl/wp-content/uploads/2019/01/NHL_Stenden_logo_NL_black.png" alt="NHL-Stenden" title="NHL-Stenden" style="transform: translate(-50%, 70%);object-fit: contain;">
+        <img id="sectionimg1" src="https://d2k0ddhflgrk1i.cloudfront.net/Websections/Huisstijl/Visual-Homepage-Merk-v1.png" alt="TU-Delft" title="TU-Delft">
+        <img id="sectionimg2" src="https://www.kennispoortdrenthe.nl/wp-content/uploads/2019/01/NHL_Stenden_logo_NL_black.png" alt="NHL-Stenden" title="NHL-Stenden">
     
     <!--quote-->
     <q>Beter goed gejat dan slecht bedacht</q>
@@ -258,9 +265,9 @@
             <a href="cv.pdf" download="cv_Cedric_Spijksma">Download hier mijn CV</a>
         </p>
       </div>
-        <img src="images/companies/adema.png" alt="Adema" title="Adema" style="transform: translate(10%, -10%);object-fit: contain;">
-        <img src="images/companies/kolthof.png" alt="Kolthof" title="kolthof" style="transform: translate(-100%, 50%);object-fit: contain;">
-        <img src="images/companies/smi.png" alt="SMI-Groep" title="SMI-Groep" style="transform: translate(-10%, 100%);object-fit: contain;">
+        <img id="sectionimg1" src="images/companies/adema.png" alt="Adema" title="Adema">
+        <img id="sectionimg2" src="images/companies/kolthof.png" alt="Kolthof" title="kolthof">
+        <img id="sectionimg3" src="images/companies/smi.png" alt="SMI-Groep" title="SMI-Groep">
     
         <!--quote-->
         <q><a href="https://www.youtube.com/watch?v=dKiNORIe8NI" style="text-decoration:none" target="_blank">ting ting ting</a></q>
@@ -272,7 +279,7 @@
     <div class="section">
       <div class="section_text">
         <h1>Contact</h1>
-        <p>Wil je meer weten? neem dan aande hand van dit formulier contact op.</p>
+        <p>Wil je meer weten? Neem dan aan de hand van dit formulier contact op.</p>
       </div>
 
         <div class="contact_container">
@@ -281,6 +288,7 @@
             <input type="email" class="form" placeholder="Email" required><br>
             <label for="cars"></label>
                 <select class="form" name="Regarding" form="Regarding">
+                    <option value="products">Betreft:</option>
                     <option value="products">Producten</option>
                     <option value="payment">Betaling</option>
                     <option value="Delivery">Bezorging</option>
