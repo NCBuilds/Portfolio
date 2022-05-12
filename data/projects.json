@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "name": "glazen observatorium(EN)",
         "discription": "een geheel glazen gebouw",
         "long_discription":"In dit project was de opgave om een gebouw te ontwikkelen wat volledig uit glas bestaat. Zowel de constructie (kolommen en liggers) als de vloer en facade. Hier is een gebouw ontwikkeld voor aan de skogafoss waterfal in ijsland. Het gebouw dient als observatorium en waterval uitzichtpunt. ook is er een restaurant en informatiepunt aanwezig. ",
@@ -11,10 +12,11 @@
         "iframe":"https://drive.google.com/file/d/1XXdEEChB0yy8rXmom_LZy8CCTREs9p_q/preview",
         "link": "",
         "date": "14-04-2022",
-        "type": "engineering, design, education",
+        "type": "engineering, design, school",
         "tag": "glass, structure"
       },
     {
+        "id": 2,
         "name": "Oudraadtweg",
         "discription": "energetisch opwaarderen van studentenwoningen",
         "long_discription":"In dit project was het doel om een jaren 60 appartementen complex op te waarderen naar een gebouw dat energie neutraal is.  ",
@@ -26,12 +28,13 @@
         "iframe":"https://drive.google.com/file/d/1t9kpgvt_i6xbCbrgWk_qR6fHjMDnLnNL/preview",
         "link": "",
         "date": "14-04-2022",
-        "type": "engineering, education",
+        "type": "engineering, school",
         "tag": ""
       },
     {
+        "id": 3,
         "name": "Robot arm",
-        "discription": "Robot arm just for fun, or educational purpoce",
+        "discription": "Robot arm just for fun, or schoolal purpoce",
         "long_discription":"",
         "scale": "",
         "image": "images/projects/Robot.jpg",
@@ -41,10 +44,11 @@
         "iframe":"",
         "link": "https://www.bcn3d.com/bcn3d-moveo-the-future-of-learning-robotic-arm/",
         "date": "16-03-2022",
-        "type": "engineering, manufacturing, education",
+        "type": "engineering, manufacturing, school",
         "tag": ""
       },
     {
+      "id": 4,
       "name": "Dakkapel",
       "discription": "hugh dormer with zinc cladding",
       "long_discription":"",
@@ -60,6 +64,7 @@
       "tag": ""
     },
     {
+      "id": 5,
       "name": "Tuinhuis",
       "discription": "large folding door and hidden door",
       "long_discription":"",
@@ -75,14 +80,15 @@
       "tag": ""
   },
   {
+      "id": 6,
       "name": "Bifold garagedeur",
-      "discription": "4x6m bifold hidden garage door",
+      "discription": "2,5x4m bifold verborgen garagedeur",
       "long_discription":"",
       "scale": "",
       "image": "images/projects/garagedoor.jpg",
-      "image1":"",
-      "image2":"",
-      "image3":"",
+      "image1":"images/projects/garagedoor1.jpg",
+      "image2":"images/projects/garagedoor2.jpg",
+      "image3":"images/projects/garagedoor3.jpg",
       "iframe":"",
       "link": "",
       "date": "01-01-2022",
@@ -90,6 +96,7 @@
       "tag": ""
   },
   {
+      "id": 7,
       "name": "Westerkade",
       "discription": "Restauration and transformation from workshop to grosserystore",
       "long_discription":"",
@@ -105,6 +112,7 @@
       "tag": ""
   },
   {
+    "id": 8,
     "name": "Appartementen Gasthuisstraat",
     "discription": "transformation of storage space into appartments",
     "long_discription":"",
@@ -120,6 +128,7 @@
     "tag": ""
 },
   {
+      "id": 9,
       "name": "Ontwerp sport-universiteit maaskant",
       "discription": "design challenge give from school",
       "long_discription":"",
@@ -131,10 +140,11 @@
       "iframe":"",
       "link": "",
       "date": "01-01-2021",
-      "type": "design, engineering",
+      "type": "design, engineering, school",
       "tag": ""
   },
   {
+      "id": 10,
       "name": "Pointclouds/mesh",
       "discription": "research on creating 3d moddels out of general available data",
       "long_discription":"",
@@ -150,6 +160,7 @@
       "tag": ""
   },
   {
+      "id": 11,
       "name": "Smart home/monitoring",
       "discription": "",
       "long_discription":"",
@@ -165,6 +176,7 @@
       "tag": ""
   },
   {
+      "id": 12,
       "name": "Modelbouw",
       "discription": "where the engineering all started, model railroads",
       "long_discription":"",
@@ -180,6 +192,7 @@
       "tag": ""
   },
   {
+      "id": 13,
       "name": "Planken",
       "discription": "Floating shelfs (elm wood) and sink",
       "long_discription":"",
@@ -195,6 +208,7 @@
       "tag": "wood"
   },
   {
+      "id": 14,
       "name": "Werkblad",
       "discription": "Table tops for a cafe",
       "long_discription":"",
@@ -210,6 +224,7 @@
       "tag": "wood"
   },
   {
+      "id": 15,
       "name": "Parshade",
       "discription": "a particle based sunshading system (Buckylab)",
       "long_discription":"",
@@ -225,6 +240,7 @@
       "tag": "glass, sunshading, spider, point holded, ps, polystyrene"
   },
   {
+      "id": 16,
       "name": "Hut koffer",
       "discription": "a wooden cabin trunk",
       "long_discription":"",
@@ -240,6 +256,7 @@
       "tag": "wood, pirate, storage"
   },
   {
+      "id": 17,
       "name": "Logo",
       "discription": "Encarved logo out of oak",
       "long_discription":"",
@@ -255,6 +272,7 @@
       "tag": "wood"
   },
   {
+      "id": 18,
       "name": "Werkbank",
       "discription": "sturdy workbench with integrated drawers",
       "long_discription":"",
@@ -270,6 +288,7 @@
       "tag": ""
   },
   {
+    "id": 19,
     "name": "Planten bakken",
     "discription": "custom made planters from Red-Cedar wood",
     "long_discription":"",
@@ -285,6 +304,7 @@
     "tag": "plant, planter"
     },
   {
+      "id": 20,
       "name": "Stadhuistoren",
       "discription": "worked on the construction/restauration of the townhall tower in the city of Bolsward",
       "long_discription":"",
@@ -300,6 +320,7 @@
       "tag": ""
   },
   {
+    "id": 21,
     "name": "Electrische fiets",
     "discription": "startup company on electric trickes",
     "long_discription":"",
@@ -315,6 +336,7 @@
     "tag": "design, electric, bycicle, IPO, Zwolle"
     },
   {
+        "id": 22,
         "name": "Biobased woningbouw",
         "discription": "E reseearch into renovation houses with prefab biobased materials",
         "long_discription":"",
@@ -330,6 +352,7 @@
         "tag": "biobased, renovation, energy, housing"
     },
     {
+        "id": 23,
         "name": "Martini kerk",
         "discription": "BIM model creating of martini church, Groningen",
         "long_discription":"",

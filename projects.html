@@ -7,7 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="images/favicon.ico">
         <link rel="stylesheet" href="styles/styles.css">  
-        <link rel="stylesheet" href="styles/projects.css">
         <link rel="stylesheet" href="styles/navigation.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="scripts/nav.js" defer></script>
@@ -38,7 +37,6 @@
                         name="searchBar"
                         id="searchBar"
                         placeholder="zoek een project"
-                        list="suggestions"
                     />
                 </div>   
             </div>
@@ -136,30 +134,36 @@
       </aside>
       <!--sidebar--> 
       <img class="scroll_down_arrow" src="images/scroll-down.gif" alt="scroll down">
-      <a href="https://www.linkedin.com/in/cedric-spijksma-b97587157"><img class="social_media_1" src="images/about/linkedin.png" alt="Linkedin" title="Linkedin"></a>
-      <a href="https://www.instagram.com/cedricspijksma/"><img class="social_media_2" src="images/about/instagram.png" alt="Instagram" title="Instagram"></a>
-      <a href="https://wa.me/31627145872"><img class="social_media_3" src="images/about/whatsapp.png" alt="Whatsapp" title="Whatsapp"></a>
-                <main class="projects_container">
-                  <ul id="more-info_card"></ul>
-                  <!--
-                  <div class="more-info_card" id="id_${project.name}">
-                        <img src="${project.img1}" id="more-info_img1" alt="${project.name}" title="${project.name}"> 
-                        <img src="${project.img2}" id="more-info_img2" alt="${project.name}" title="${project.name}"> 
-                        <img src="${project.img3}" id="more-info_img3" alt="${project.name}" title="${project.name}"> 
-                    <div class="more-info_description">
-                        <h1>${project.name}</h1>
-                        <p>${project.long_discription}</p>
-                        <a href="${project.link}">"${project.link}"</a>
-                    </div>
-                    <div class="more-info_iframe">
-                      <iframe src="${project.iframe}" class="info-iframe"> </iframe>
-                    </div>
-                  </div>
-                  -->
-                    <ul id="projectsList"></ul>
-                    <script src="scripts/projects.js"></script>  
-                </main>
-              
+      <script src="jquery-3.6.0.min.js"></script>
+      <script>
+        $(document).ready(function(){
+          function arrowshow(){
+            var wh=$(window).height();
+            var htmlh=$("html,body").height();
+            var scrh=$("html,body").scrollTop();
+            //alert ("wh="+wh+" htmlh="+htmlh +" scrh="+scrh+"
+        hide="+((wh+scrh)>=(htmlh-300))";
+            if ((wh+scrh)>=(htmlh-200)) {
+              $(".scroll_down_arrow").hide();
+            } else {
+              $(".scroll_down_arrow").show();
+            }
+          }
+          $(window).scroll(function(){
+            arrowshow();
+          });
+          $(window).resize(function(){
+            arrowshow();
+          });
+          arrowshow();
+        });
+      </script>
+      <a href="https://www.linkedin.com/in/cedric-spijksma-b97587157"><img class="social_media" id="social_media_1" src="images/about/linkedin.png" alt="Linkedin" title="Linkedin"></a>
+      <a href="https://www.instagram.com/cedricspijksma/"><img class="social_media" id="social_media_2" src="images/about/instagram.png" alt="Instagram" title="Instagram"></a>
+      <a href="https://wa.me/31627145872"><img class="social_media" id="social_media_3" src="images/about/whatsapp.png" alt="Whatsapp" title="Whatsapp"></a>
+                <main class="card_container">
+                    <ul id="cardList"></ul>
+                    <script src="scripts/projects.js"></script>
+                </main>           
     </body>
 </html>
-

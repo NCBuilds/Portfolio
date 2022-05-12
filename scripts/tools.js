@@ -1,8 +1,9 @@
-const toolsList = document.getElementById('toolsList');
+const toolsList = document.getElementById('cardList');
 const searchBar = document.getElementById('searchBar');
 const sortx = document.getElementById('sort');
 const category = document.getElementById('category');
 let hptools = [];
+var categorisedtools=[].concat(hptools);
 
 const loadtools = async () => {
     try {
@@ -16,7 +17,7 @@ const loadtools = async () => {
 
 sortx.addEventListener('change', (e) => {
     var valueSelected = sortx.value;
-    var items = [].concat(hptools); // copy array not a pointer
+    var items = [].concat(categorisedtools); // copy array not a pointer
     if (valueSelected == 'name') {
         items.sort((a, b) => {
             let fa = a.name.toLowerCase(),
@@ -75,7 +76,7 @@ sortx.addEventListener('change', (e) => {
 category.addEventListener('change', (e) => {
     var valueSelected = category.value;
     var items = [].concat(hptools); 
-    var categorisedtools=[];
+    categorisedtools=[];
     var check = "";
     if (valueSelected == 'heavy') { 
         check = "zware machines";
@@ -98,7 +99,7 @@ category.addEventListener('change', (e) => {
         });
     }
     if (valueSelected=="all"){
-        categorisedtools=hptools;
+        categorisedtools=[].concat(hptools);
     }
     displaytools(categorisedtools);
 }); //end category
@@ -125,9 +126,26 @@ function displaytools(tools) {
                 <div class="card-body">
                     <h2 class="card-title">${tool.name}</h2>
                     <p>${tool.discription}</p>
-                    <a href="${tool.link}" class="button">Meer info</a>
+                    <button onclick="document.getElementById('myModal${tool.id}').style.display='inline'" class="button">Meer info</button>
                 </div>
             </div>
+
+            <div id="myModal${tool.id}" class="modal">
+            <div class="more-info_card">
+                    <span class="close" onclick="document.getElementById('myModal${tool.id}').style.display='none'">X</span>
+                    <img src="${tool.image1}" id="more-info_img1" alt="${tool.name}" title="${tool.name}"> 
+                    <img src="${tool.image2}" id="more-info_img2" alt="${tool.name}" title="${tool.name}"> 
+                    <img src="${tool.image3}" id="more-info_img3" alt="${tool.name}" title="${tool.name}"> 
+                <div class="more-info_description">
+                    <h1>${tool.name}</h1>
+                    <p>${tool.long_discription}</p>
+                </div>
+                <div class="more-info_iframe">
+                <iframe src="${tool.iframe}" class="info-iframe"> </iframe>
+                </div>
+            </div>
+        </div>
+
         `;
         })
         .join('');

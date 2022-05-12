@@ -1,8 +1,9 @@
-const productsList = document.getElementById('productsList');
+const productsList = document.getElementById('cardList');
 const searchBar = document.getElementById('searchBar');
 const sortx = document.getElementById('sort');
 const category = document.getElementById('category');
 let hpproducts = [];
+var categorisedproducts=[].concat(hpproducts);
 
 const loadproducts = async () => {
     try {
@@ -16,7 +17,7 @@ const loadproducts = async () => {
 
 sortx.addEventListener('change', (e) => {
     var valueSelected = sortx.value;
-    var items = [].concat(hpproducts); // copy array not a pointer
+    var items = [].concat(categorisedproducts);//[].concat(hpproducts); // copy array not a pointer
     if (valueSelected == 'name') {
         items.sort((a, b) => {
             let fa = a.name.toLowerCase(),
@@ -101,7 +102,7 @@ sortx.addEventListener('change', (e) => {
 category.addEventListener('change', (e) => {
     var valueSelected = category.value;
     var items = [].concat(hpproducts); 
-    var categorisedproducts=[];
+    categorisedproducts=[];
     var check = "";
     if (valueSelected == 'cities') { 
         check = "gravering";
@@ -121,7 +122,7 @@ category.addEventListener('change', (e) => {
         });
     }
     if (valueSelected=="all"){
-        categorisedproducts=hpproducts;
+        categorisedproducts=[].concat(hpproducts);
     }
     displayproducts(categorisedproducts);
 }); //end category
@@ -147,6 +148,7 @@ function displayproducts(products) {
                 <div class="card-body">
                     <h2 class="card-title">${product.name}</h2>
                     <p>${product.discription}</p>
+                    <button onclick="document.getElementById('myModal${product.id}').style.display='inline'" class="button">Meer info</button>
                     <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                         <input type="hidden" name="cmd" value="_s-xclick">
                         <input type="hidden" name="hosted_button_id" value="${product.paypal}">
@@ -154,6 +156,32 @@ function displayproducts(products) {
                     </form>
                 </div>
             </div>
+
+            <div id="myModal${product.id}" class="modal">
+            <div class="more-info_card">
+                    <span class="close" onclick="document.getElementById('myModal${product.id}').style.display='none'">X</span>
+                    <img src="${product.image1}" id="more-info_img1" alt="${product.name}" title="${product.name}" onclick="document.getElementById('myModal2${product.id}').style.display='inline'"> 
+                    <img src="${product.image2}" id="more-info_img2" alt="${product.name}" title="${product.name}" onclick="document.getElementById('myModal2${product.id}').style.display='inline'"> 
+                    <img src="${product.image3}" id="more-info_img3" alt="${product.name}" title="${product.name}" onclick="document.getElementById('myModal2${product.id}').style.display='inline'"> 
+                <div class="more-info_description">
+                    <h1>${product.name}</h1>
+                    <p>${product.long_discription}</p>
+                    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="${product.paypal}">
+                    <input type="submit" value="${product.price}" name="Verzenden" alt="PayPal – The safer, easier way to pay online!">
+                </form>
+                </div>
+                </div>
+
+            <div id="myModal2${product.id}" class="modal2">
+            <div class="more-info_extended_img">
+                <span class="close2" onclick="document.getElementById('myModal2${product.id}').style.display='none'">X</span>
+            </div>
+            </div>
+
+            </div>
+        </div>
 
         `;
         })
