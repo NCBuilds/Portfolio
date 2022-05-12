@@ -19,6 +19,19 @@
   scroll-behavior: smooth;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: rgb(255, 165, 0);
+    --lightest-gray: rgb(28, 27, 34);
+    --light-gray: rgb(144, 144, 144);
+    --medium-gray: rgb(96, 96, 96);
+    --dark-gray: rgb(28, 27, 34);
+  }
+  * {
+    color: white;
+  }
+}
+
 .h1 {
   font-size: 2.5em;
   margin-bottom: 30px;
@@ -40,6 +53,7 @@
 }
 .h6 {
   font-size: 1.5em;
+  color: rgb(255, 165, 0);
   text-decoration-color: rgb(255, 165, 0);
 }
 /* end Text definemend */
@@ -365,12 +379,9 @@ progress[value] {
 
 /* selectors*/
 .close {
-  position: absolute;
-  left: 7%;
-  top: 52px;
   color: var(--accent-color);
-  float: right;
-  font-size: 24px;
+  float: left;
+  font-size: 20px;
   font-weight: bold;
   z-index: 500000000;
 }
@@ -531,7 +542,7 @@ margin-bottom: 0.75em;
 .more-info_card {
   background-color: #fefefe;
   float: left;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #888;
   width: 70%;
   height: 90%;
@@ -555,7 +566,7 @@ margin-bottom: 0.75em;
 }
 .more-info_card img{
   position: relative;
-  width: 30%;
+  width: 29%;
   height: 17vw;
   border-radius: 20px;
   margin: 1.5%;
@@ -578,5 +589,10 @@ margin-bottom: 0.75em;
   width: 90%;
   transform: translateX(50%);
   height: 35%;
+}
+@media (prefers-color-scheme: dark) {
+  .more-info_card {background-color: rgb(43, 42, 51);}
+  .more-info_sidecard {background-color: rgb(43, 42, 51);}
+  .more-info_extended_img {background-color: rgb(43, 42, 51);}
 }
 /* more info end */
