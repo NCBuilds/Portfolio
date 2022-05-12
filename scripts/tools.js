@@ -140,14 +140,12 @@ function displaytools(tools) {
                     <h1>${tool.name}</h1>
                     <p>${tool.long_discription}</p>
                 </div>
-                <div class="more-info_iframe">
-                <iframe src="${tool.iframe}" class="info-iframe"> </iframe>
-                </div>
             </div>
         </div>
 
         `;
         })
+
         .join('');
     toolsList.innerHTML = htmlString;
 };
