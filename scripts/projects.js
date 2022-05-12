@@ -139,9 +139,9 @@ function displayprojects(projects) {
                 <div id="myModal${project.id}" class="modal">
                     <div class="more-info_card">
                             <span class="close" onclick="document.getElementById('myModal${project.id}').style.display='none'">X</span>
-                            <img src="${project.image1}" id="more-info_img1" alt="${project.name}" title="${project.name}"> 
-                            <img src="${project.image2}" id="more-info_img2" alt="${project.name}" title="${project.name}"> 
-                            <img src="${project.image3}" id="more-info_img3" alt="${project.name}" title="${project.name}"> 
+                            <img src="${project.image1}" id="more-info_img1" alt="${project.name}" title="${project.name} onclick="document.getElementById('myModal2${project.id}').style.display='inline'"> 
+                            <img src="${project.image2}" id="more-info_img2" alt="${project.name}" title="${project.name} onclick="document.getElementById('myModal2${project.id}').style.display='inline'"> 
+                            <img src="${project.image3}" id="more-info_img3" alt="${project.name}" title="${project.name} onclick="document.getElementById('myModal2${project.id}').style.display='inline'"> 
                         <div class="more-info_description">
                             <h1>${project.name}</h1>
                             <p>${project.long_discription}</p>
@@ -150,6 +150,13 @@ function displayprojects(projects) {
                         <div class="more-info_iframe">
                         <iframe src="${project.iframe}" class="info-iframe"> </iframe>
                         </div>
+
+                        <div id="myModal2${project.id}" class="modal2">
+                        <div class="more-info_extended_img">
+                            <span class="close2" onclick="document.getElementById('myModal2${project.id}').style.display='none'">X</span>
+                        </div>
+                        </div>
+
                     </div>
                 </div>
             

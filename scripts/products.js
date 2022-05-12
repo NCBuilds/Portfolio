@@ -160,9 +160,9 @@ function displayproducts(products) {
             <div id="myModal${product.id}" class="modal">
             <div class="more-info_card">
                     <span class="close" onclick="document.getElementById('myModal${product.id}').style.display='none'">X</span>
-                    <img src="${product.image1}" id="more-info_img1" alt="${product.name}" title="${product.name}" onclick="document.getElementById('myModal2${product.id}').style.display='inline'"> 
-                    <img src="${product.image2}" id="more-info_img2" alt="${product.name}" title="${product.name}" onclick="document.getElementById('myModal2${product.id}').style.display='inline'"> 
-                    <img src="${product.image3}" id="more-info_img3" alt="${product.name}" title="${product.name}" onclick="document.getElementById('myModal2${product.id}').style.display='inline'"> 
+                    <img src="${product.image1}" id="more-info_img1" alt="${product.name}" title="${product.name}"> 
+                    <img src="${product.image2}" id="more-info_img2" alt="${product.name}" title="${product.name}"> 
+                    <img src="${product.image3}" id="more-info_img3" alt="${product.name}" title="${product.name}"> 
                 <div class="more-info_description">
                     <h1>${product.name}</h1>
                     <p>${product.long_discription}</p>
@@ -173,12 +173,6 @@ function displayproducts(products) {
                 </form>
                 </div>
                 </div>
-
-            <div id="myModal2${product.id}" class="modal2">
-            <div class="more-info_extended_img">
-                <span class="close2" onclick="document.getElementById('myModal2${product.id}').style.display='none'">X</span>
-            </div>
-            </div>
 
             </div>
         </div>

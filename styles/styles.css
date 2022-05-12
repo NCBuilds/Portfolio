@@ -380,20 +380,25 @@ progress[value] {
 /* selectors*/
 .close {
   color: var(--accent-color);
-  float: left;
+  cursor: pointer;
+  float: right;
   font-size: 20px;
   font-weight: bold;
   z-index: 500000000;
 }
 .close2 {
-  position: absolute;
-  left: 7%;
-  top: 52px;
+  cursor: pointer;
   color: var(--accent-color);
   float: right;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   z-index: 600000000;
+}
+.close:hover{
+  color: var(--light-gray);
+}
+.close2:hover{
+  color: var(--light-gray);
 }
 .button {
   border: none;
@@ -585,6 +590,7 @@ margin-bottom: 0.75em;
 }
 .more-info_iframe {
   position: absolute;
+  border: none;
   float: center;
   width: 90%;
   transform: translateX(50%);
