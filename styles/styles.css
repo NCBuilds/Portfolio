@@ -33,6 +33,9 @@
   * {
     color: white;
   }
+  .h2 {
+    color: white;
+  }
 }
 
 .h1 {
@@ -514,15 +517,15 @@ margin-bottom: 0.75em;
 @media (hover: hover), (prefers-reduced-motion: no-preference) {
 .card-body {
   transform: translateY(60%);
-  transition: transform 500ms ease;
+  transition: transform 350ms ease;
 }
 .card:hover .card-body {
   transform: translateY(0);
-  transition-delay: 500ms;
+  transition-delay: 350ms;
 }
 .card-body > *:not(.card-title) {
   opacity: 0;
-  transition: opacity 1200ms linear 400ms;
+  transition: opacity 800ms linear 350ms;
 }
 .card:hover .card-body > *:not(.card-title) {
   opacity: 1;
