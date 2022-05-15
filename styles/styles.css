@@ -1,4 +1,7 @@
 :root {
+  --bg-light: white; 
+  --bg-dark: rgb(43, 42, 51);
+  --darkmode: rgb(28, 27, 34);
   --accent-color: rgb(255, 165, 0);
   --lightest-gray: rgb(244, 244, 244);
   --light-gray: rgb(144, 144, 144);
@@ -356,11 +359,11 @@ progress[value] {
 .modal2  {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 510000000; /* Sit on top */
-  padding: 5%; /* Location of the box */
-  left: 74px;
-  top: 50px;
-  width: calc(100vw - 74px); 
+  z-index: 11000; /* Sit on top */
+  padding: 20px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; 
   height: 100%;
   overflow-y: auto; 
   background-color: white; /* Fallback color */
@@ -593,8 +596,7 @@ margin-bottom: 0.75em;
   border: none;
   float: center;
   width: 90%;
-  transform: translateX(50%);
-  height: 35%;
+  height: auto;
 }
 @media (prefers-color-scheme: dark) {
   .more-info_card {background-color: rgb(43, 42, 51);}

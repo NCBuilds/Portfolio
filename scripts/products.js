@@ -165,7 +165,7 @@ function displayproducts(products) {
                     <img src="${product.image3}" id="more-info_img3" alt="${product.name}" title="${product.name}"> 
                 <div class="more-info_description">
                     <h1>${product.name}</h1>
-                    <p>${product.long_discription}</p>
+                    <p>${product.long_discription}</p><br>${product.scale}<br>${product.size}<br>
                     <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value="${product.paypal}">
