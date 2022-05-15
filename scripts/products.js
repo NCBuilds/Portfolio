@@ -145,6 +145,11 @@ function displayproducts(products) {
         .map((product) => {
             return `
             <div class="card" style="background-image: url('${product.image}')">
+                    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" class="price_form">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="${product.paypal}">
+                        <input type="submit" value="${product.price}" name="Verzenden" alt="PayPal – The safer, easier way to pay online!">
+                    </form>
                 <div class="card-body">
                     <h2 class="card-title">${product.name}</h2>
                     <p>${product.discription}</p>

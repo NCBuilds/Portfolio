@@ -1,27 +1,20 @@
 nog op te lossen:
-donkere achtergrond bij hover klopt niet ()
-iframe modal verschalen     (projecten)
-modal meeschalen in lengte  (projecten)
-text scaling card           (producten)
-projecten sorteren gaat stuk
-meer info kan scrollen op achtergrond (producten en projecten)
-afbeeldingen centreren niet meer info (producten en projecten)
-centreren grid              (producten en projecten)
-sorteren werkt niet         (werkplaats)   --->     meerdere types kan niet
-over mij eerste text pas niet aan bij darkmode
+iframe in modal verschalen      (projecten/producten)
+modal meeschalen in lengte      (projecten/producten)
+text scaling card  (titel)      (projecten/producten)
+projecten sorteren gaat stuk    (producten)
+meer info kan scrollen op achtergrond   (producten en projecten)
+afbeeldingen centreren niet (meer info) (producten en projecten)
+centreren grid                  (producten en projecten)
+meerdere types in sorteren werkt niet   (database/js producten en projecten)
+prijs tonen in hoek             (producten)
 
 toevoegen:
 join form                   (werkplaats)
 dark/licht mode keuze       (menu)
-prijs tonen op hoofdkaart   (producten)
 
 aanpassen:
 hover search menu text      (menu)
-webshop naar rechts         (manu)
-animatie snelheid cards hoger
-afbeeldingen ontbreken      (werkplaats)
 text veiligheid naar rechts (veiligheid)
 kwaliteit afbeeldingen      (veiligheid)
 buttons van links           (veiligheid en over mij)
-
-zoek een project zoek een product
