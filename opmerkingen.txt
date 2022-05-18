@@ -1,20 +1,3 @@
 nog op te lossen:
-iframe in modal verschalen      (projecten/producten)
-modal meeschalen in lengte      (projecten/producten)
-text scaling card  (titel)      (projecten/producten)
-projecten sorteren gaat stuk    (producten)
-meer info kan scrollen op achtergrond   (producten en projecten)
 afbeeldingen centreren niet (meer info) (producten en projecten)
-centreren grid                  (producten en projecten)
 meerdere types in sorteren werkt niet   (database/js producten en projecten)
-prijs tonen in hoek             (producten)
-
-toevoegen:
-join form                   (werkplaats)
-dark/licht mode keuze       (menu)
-
-aanpassen:
-hover search menu text      (menu)
-text veiligheid naar rechts (veiligheid)
-kwaliteit afbeeldingen      (veiligheid)
-buttons van links           (veiligheid en over mij)

@@ -137,6 +137,7 @@ function displayprojects(projects) {
             </div>
 
                 <div id="myModal${project.id}" class="modal">
+                    <a name="top"></a>
                     <div class="more-info_card">
                             <span class="close" onclick="document.getElementById('myModal${project.id}').style.display='none'">X</span>
                             <img src="${project.image1}" id="more-info_img1" alt="${project.name}" title="${project.name} onclick="document.getElementById('2myModal${project.id}').style.display='inline'"> 
@@ -145,19 +146,11 @@ function displayprojects(projects) {
                         <div class="more-info_description">
                             <h1>${project.name}</h1>
                             <p>${project.long_discription}</p>
-                            <a href="${project.link}">"${project.link}"</a>
+                            <a href="${project.link}" target="_blank">"${project.link}" </a>
                         </div>
-                        <div class="more-info_iframe">
-                            <iframe src="${project.iframe}" class="info-iframe"> </iframe>
-                        </div>
-                    </div>
-
-                    <div id="2myModal${project.id}" class="modal2">
-                        <div class="more-info_extended_img">
-                            <span class="close2" onclick="document.getElementById('2myModal${project.id}').style.display='none'">X</span>
-                        </div>
-                    </div>
-
+                            <iframe src="${project.iframe}" class="more-info_iframe"> </iframe>
+                            <iframe src="${project.iframe2}" class="more-info_iframe"> </iframe>
+                        <q><a href="#top">Terug naar boven</a></q>
                     </div>
                 </div>
             

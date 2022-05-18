@@ -144,6 +144,7 @@ function displayproducts(products) {
     const htmlString = products
         .map((product) => {
             return `
+
             <div class="card" style="background-image: url('${product.image}')">
                     <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" class="price_form">
                         <input type="hidden" name="cmd" value="_s-xclick">
@@ -159,27 +160,31 @@ function displayproducts(products) {
                         <input type="hidden" name="hosted_button_id" value="${product.paypal}">
                         <input type="submit" value="${product.price}" name="Verzenden" alt="PayPal – The safer, easier way to pay online!">
                     </form>
+
                 </div>
             </div>
 
             <div id="myModal${product.id}" class="modal">
-            <div class="more-info_card">
-                    <span class="close" onclick="document.getElementById('myModal${product.id}').style.display='none'">X</span>
-                    <img src="${product.image1}" id="more-info_img1" alt="${product.name}" title="${product.name}"> 
-                    <img src="${product.image2}" id="more-info_img2" alt="${product.name}" title="${product.name}"> 
-                    <img src="${product.image3}" id="more-info_img3" alt="${product.name}" title="${product.name}"> 
-                <div class="more-info_description">
-                    <h1>${product.name}</h1>
-                    <p>${product.long_discription}</p><br>${product.scale}<br>${product.size}<br>
-                    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                    <input type="hidden" name="cmd" value="_s-xclick">
-                    <input type="hidden" name="hosted_button_id" value="${product.paypal}">
-                    <input type="submit" value="${product.price}" name="Verzenden" alt="PayPal – The safer, easier way to pay online!">
-                </form>
+                <div class="more-info_card">
+                        <span class="close" onclick="document.getElementById('myModal${product.id}').style.display='none'">X</span>
+                        <a href="${product.image1}" target="_blank"><img src="${product.image1}" id="more-info_img1" alt="${product.name}" title="${product.name}"></a> 
+                        <a href="${product.image2}" target="_blank"><img src="${product.image2}" id="more-info_img2" alt="${product.name}" title="${product.name}"></a> 
+                        <a href="${product.image3}" target="_blank"><img src="${product.image3}" id="more-info_img3" alt="${product.name}" title="${product.name}"></a> 
+                    <div class="more-info_description">
+                        <h1>${product.name}</h1>
+                        <p>${product.long_discription}</p><br>${product.scale}<br>${product.size}<br>
+                        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="hosted_button_id" value="${product.paypal}">
+                            <input type="submit" value="${product.price}" name="Verzenden" alt="PayPal – The safer, easier way to pay online!">
+                        </form>
+                    </div>
                 </div>
-                </div>
-
             </div>
+            
+                
+            </div>
+
         </div>
 
         `;
