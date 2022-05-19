@@ -151,7 +151,7 @@ function displayproducts(products) {
                         <input type="hidden" name="hosted_button_id" value="${product.paypal}">
                         <input type="submit" value="${product.price}" name="Verzenden" alt="PayPal – The safer, easier way to pay online!">
                     </form>
-                <div class="card-body">
+                <div class="card-body" id="productcard-body">
                     <h2 class="card-title">${product.name}</h2>
                     <p>${product.discription}</p>
                     <button onclick="document.getElementById('myModal${product.id}').style.display='inline'" class="button">Meer info</button>
@@ -160,16 +160,17 @@ function displayproducts(products) {
                         <input type="hidden" name="hosted_button_id" value="${product.paypal}">
                         <input type="submit" value="${product.price}" name="Verzenden" alt="PayPal – The safer, easier way to pay online!">
                     </form>
-
                 </div>
             </div>
 
             <div id="myModal${product.id}" class="modal">
                 <div class="more-info_card">
                         <span class="close" onclick="document.getElementById('myModal${product.id}').style.display='none'">X</span>
-                        <a href="${product.image1}" target="_blank"><img src="${product.image1}" id="more-info_img1" alt="${product.name}" title="${product.name}"></a> 
-                        <a href="${product.image2}" target="_blank"><img src="${product.image2}" id="more-info_img2" alt="${product.name}" title="${product.name}"></a> 
-                        <a href="${product.image3}" target="_blank"><img src="${product.image3}" id="more-info_img3" alt="${product.name}" title="${product.name}"></a> 
+                        <div class="more-info_card_image_container">
+                            <a href="${product.image1}" target="_blank"><img src="${product.image1}" id="more-info_img1" alt="${product.name}" title="${product.name}"></a> 
+                            <a href="${product.image2}" target="_blank"><img src="${product.image2}" id="more-info_img2" alt="${product.name}" title="${product.name}"></a> 
+                            <a href="${product.image3}" target="_blank"><img src="${product.image3}" id="more-info_img3" alt="${product.name}" title="${product.name}"></a> 
+                        </div>
                     <div class="more-info_description">
                         <h1>${product.name}</h1>
                         <p>${product.long_discription}</p><br>${product.scale}<br>${product.size}<br>

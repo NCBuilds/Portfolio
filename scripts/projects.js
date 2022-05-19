@@ -140,9 +140,11 @@ function displayprojects(projects) {
                     <a name="top"></a>
                     <div class="more-info_card">
                             <span class="close" onclick="document.getElementById('myModal${project.id}').style.display='none'">X</span>
-                            <img src="${project.image1}" id="more-info_img1" alt="${project.name}" title="${project.name} onclick="document.getElementById('2myModal${project.id}').style.display='inline'"> 
-                            <img src="${project.image2}" id="more-info_img2" alt="${project.name}" title="${project.name} onclick="document.getElementById('2myModal${project.id}').style.display='inline'"> 
-                            <img src="${project.image3}" id="more-info_img3" alt="${project.name}" title="${project.name} onclick="document.getElementById('2myModal${project.id}').style.display='inline'"> 
+                            <div class="more-info_card_image_container">
+                                <a href="${project.image1}" target="_blank"><img src="${project.image1}" id="more-info_img1" alt="${project.name}" title="${project.name}"></a>
+                                <a href="${project.image1}" target="_blank"><img src="${project.image2}" id="more-info_img2" alt="${project.name}" title="${project.name}"></a>
+                                <a href="${project.image1}" target="_blank"><img src="${project.image3}" id="more-info_img3" alt="${project.name}" title="${project.name}"></a> 
+                            </div>
                         <div class="more-info_description">
                             <h1>${project.name}</h1>
                             <p>${project.long_discription}</p>

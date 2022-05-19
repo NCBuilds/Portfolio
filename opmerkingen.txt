@@ -1,3 +1,2 @@
 nog op te lossen:
-afbeeldingen centreren niet (meer info) (producten en projecten)
 meerdere types in sorteren werkt niet   (database/js producten en projecten)
