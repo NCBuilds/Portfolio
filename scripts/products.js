@@ -151,15 +151,10 @@ function displayproducts(products) {
                         <input type="hidden" name="hosted_button_id" value="${product.paypal}">
                         <input type="submit" value="${product.price}" name="Verzenden" alt="PayPal – The safer, easier way to pay online!">
                     </form>
-                <div class="card-body" id="productcard-body">
+                <div class="card-body">
                     <h2 class="card-title">${product.name}</h2>
                     <p>${product.discription}</p>
                     <button onclick="document.getElementById('myModal${product.id}').style.display='inline'" class="button">Meer info</button>
-                    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                        <input type="hidden" name="cmd" value="_s-xclick">
-                        <input type="hidden" name="hosted_button_id" value="${product.paypal}">
-                        <input type="submit" value="${product.price}" name="Verzenden" alt="PayPal – The safer, easier way to pay online!">
-                    </form>
                 </div>
             </div>
 

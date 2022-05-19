@@ -452,7 +452,6 @@ input[type=submit]:hover {
   padding: clamp(1.5rem, 10vh, 10rem) 0 0;
 }
 #indexcard-body {min-height: 50px;}
-#productcard-body {min-height: 220px;}
 #program {
   width: 40px;
   height: 40px;
@@ -523,10 +522,6 @@ min-height: 51px;
 }
 .card:hover .card-body {
   transform: translateY(0);
-  transition-delay: 350ms;
-}
-.card:hover #productcard-body {
-  transform: translateY(-20%);
   transition-delay: 350ms;
 }
 .card-body > *:not(.card-title) {
