@@ -141,17 +141,17 @@ function displayprojects(projects) {
                     <div class="more-info_card">
                             <span class="close" onclick="document.getElementById('myModal${project.id}').style.display='none'">X</span>
                             <div class="more-info_card_image_container">
-                                <a href="${project.image1}" target="_blank"><img src="${project.image1}" id="more-info_img1" alt="${project.name}" title="${project.name}"></a>
-                                <a href="${project.image1}" target="_blank"><img src="${project.image2}" id="more-info_img2" alt="${project.name}" title="${project.name}"></a>
-                                <a href="${project.image1}" target="_blank"><img src="${project.image3}" id="more-info_img3" alt="${project.name}" title="${project.name}"></a> 
+                                <a href="${project.image1}" target="_blank"><img src="${project.image1}" id="more-info_img1" loading="lazy" alt="${project.name}" title="${project.name}"></a>
+                                <a href="${project.image2}" target="_blank"><img src="${project.image2}" id="more-info_img2" loading="lazy" alt="${project.name}" title="${project.name}"></a>
+                                <a href="${project.image3}" target="_blank"><img src="${project.image3}" id="more-info_img3" loading="lazy" alt="${project.name}" title="${project.name}"></a> 
                             </div>
                         <div class="more-info_description">
                             <h1>${project.name}</h1>
                             <p>${project.long_discription}</p>
                             <a href="${project.link}" target="_blank">"${project.link}" </a>
                         </div>
-                            <iframe src="${project.iframe}" class="more-info_iframe"> </iframe>
-                            <iframe src="${project.iframe2}" class="more-info_iframe"> </iframe>
+                            <iframe src="${project.iframe}" class="more-info_iframe" loading="lazy"> </iframe>
+                            <iframe src="${project.iframe2}" class="more-info_iframe" loading="lazy"> </iframe>
                         <q><a href="#top">Terug naar boven</a></q>
                     </div>
                 </div>
