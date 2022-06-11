@@ -116,9 +116,10 @@ category.addEventListener('change', (e) => {
     if (check !== "") {
         
         items.filter(function(a){
-            if (a.type==check){
+            // if (a.type==check){ //checked on whole string .....
+            if (a.type.includes(check)) { //check if the check is part of the whole string
                 categorisedproducts.push(a);
-            }
+             }
         });
     }
     if (valueSelected=="all"){
@@ -162,13 +163,14 @@ function displayproducts(products) {
                 <div class="more-info_card">
                         <span class="close" onclick="document.getElementById('myModal${product.id}').style.display='none'">X</span>
                         <div class="more-info_card_image_container">
-                            <a href="${product.image1}" target="_blank"><img src="${product.image1}" id="more-info_img1" alt="${product.name}" title="${product.name}"></a> 
-                            <a href="${product.image2}" target="_blank"><img src="${product.image2}" id="more-info_img2" alt="${product.name}" title="${product.name}"></a> 
-                            <a href="${product.image3}" target="_blank"><img src="${product.image3}" id="more-info_img3" alt="${product.name}" title="${product.name}"></a> 
+                            <a href="${product.image1}" target="_blank"><img src="${product.image1}" id="more-info_img1" loading="lazy" alt="${product.name}" title="${product.name}"></a> 
+                            <a href="${product.image2}" target="_blank"><img src="${product.image2}" id="more-info_img2" loading="lazy" alt="${product.name}" title="${product.name}"></a> 
+                            <a href="${product.image3}" target="_blank"><img src="${product.image3}" id="more-info_img3" loading="lazy" alt="${product.name}" title="${product.name}"></a> 
                         </div>
                     <div class="more-info_description">
                         <h1>${product.name}</h1>
                         <p>${product.long_discription}</p><br>${product.scale}<br>${product.size}<br>
+                        ${product.form}
                         <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                             <input type="hidden" name="cmd" value="_s-xclick">
                             <input type="hidden" name="hosted_button_id" value="${product.paypal}">

@@ -1,4 +1,0 @@
-nog op te lossen:
-meerdere types in sorteren werkt niet   (database/js producten en projecten)
-
-home page background title

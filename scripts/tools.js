@@ -131,18 +131,22 @@ function displaytools(tools) {
             </div>
 
             <div id="myModal${tool.id}" class="modal">
-            <div class="more-info_card">
-                    <span class="close" onclick="document.getElementById('myModal${tool.id}').style.display='none'">X</span>
-                    <img src="${tool.image1}" id="more-info_img1" alt="${tool.name}" title="${tool.name}"> 
-                    <img src="${tool.image2}" id="more-info_img2" alt="${tool.name}" title="${tool.name}"> 
-                    <img src="${tool.image3}" id="more-info_img3" alt="${tool.name}" title="${tool.name}"> 
-                <div class="more-info_description">
-                    <h1>${tool.name}</h1>
-                    <p>${tool.long_discription}</p>
+            <a name="top"></a>
+                <div class="more-info_card">
+                        <span class="close" onclick="document.getElementById('myModal${tool.id}').style.display='none'">X</span>
+                        <div class="more-info_card_image_container">
+                            <a href="${tool.image1}" target="_blank"><img src="${tool.image1}" id="more-info_img1" loading="lazy" alt="${tool.name}" title="${tool.name}"></a>
+                            <a href="${tool.image2}" target="_blank"><img src="${tool.image2}" id="more-info_img2" loading="lazy" alt="${tool.name}" title="${tool.name}"></a>
+                            <a href="${tool.image3}" target="_blank"><img src="${tool.image3}" id="more-info_img3" loading="lazy" alt="${tool.name}" title="${tool.name}"></a> 
+                        </div>
+                    <div class="more-info_description">
+                        <h1>${tool.name}</h1>
+                        <p>${tool.long_discription}</p>
+                        <q><a href="#top">Terug naar boven</a></q>
+                    </div>
                 </div>
             </div>
         </div>
-
         `;
         })
 

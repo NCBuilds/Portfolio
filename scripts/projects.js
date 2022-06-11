@@ -98,7 +98,7 @@ category.addEventListener('change', (e) => {
     if (check !== "") {
         
         items.filter(function(a){
-            if (a.type==check){
+           if (a.type.includes(check)) { //check if the check is part of the whole string
                 categorisedprojects.push(a);
             }
         });
